@@ -1,11 +1,11 @@
 package com.nikimanolitsi.petclinic.services.map;
 
 import com.nikimanolitsi.petclinic.model.Pet;
-import com.nikimanolitsi.petclinic.services.CrudService;
+import com.nikimanolitsi.petclinic.services.PetService;
 
 import java.util.Set;
 
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements CrudService<Pet, Long> {
+public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
 
 
     @Override
