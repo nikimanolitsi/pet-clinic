@@ -2,7 +2,7 @@ package com.nikimanolitsi.petclinic.services.springdatajpa;
 
 import com.nikimanolitsi.petclinic.model.Visit;
 import com.nikimanolitsi.petclinic.repositories.VisitRepository;
-import com.nikimanolitsi.petclinic.services.map.VisitService;
+import com.nikimanolitsi.petclinic.services.VisitService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 

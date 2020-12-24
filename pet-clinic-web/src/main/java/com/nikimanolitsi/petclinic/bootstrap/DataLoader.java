@@ -10,7 +10,7 @@ import com.nikimanolitsi.petclinic.services.OwnerService;
 import com.nikimanolitsi.petclinic.services.PetTypeService;
 import com.nikimanolitsi.petclinic.services.SpecialtyService;
 import com.nikimanolitsi.petclinic.services.VetService;
-import com.nikimanolitsi.petclinic.services.map.VisitService;
+import com.nikimanolitsi.petclinic.services.VisitService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
