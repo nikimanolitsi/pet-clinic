@@ -5,10 +5,12 @@ import com.nikimanolitsi.petclinic.model.Pet;
 import com.nikimanolitsi.petclinic.model.PetType;
 import com.nikimanolitsi.petclinic.model.Specialty;
 import com.nikimanolitsi.petclinic.model.Vet;
+import com.nikimanolitsi.petclinic.model.Visit;
 import com.nikimanolitsi.petclinic.services.OwnerService;
 import com.nikimanolitsi.petclinic.services.PetTypeService;
 import com.nikimanolitsi.petclinic.services.SpecialtyService;
 import com.nikimanolitsi.petclinic.services.VetService;
+import com.nikimanolitsi.petclinic.services.map.VisitService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -21,12 +23,15 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -91,6 +96,13 @@ public class DataLoader implements CommandLineRunner {
         owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
+
+        Visit visit = new Visit();
+        visit.setPet(fionasCat);
+        visit.setDate(LocalDate.now());
+        visit.setDescription("Sneezy Kitty");
+
+        visitService.save(visit);
 
         System.out.println("Loaded Owners...");
 
