@@ -1,5 +1,6 @@
+[![nikimanolitsi](https://circleci.com/gh/nikimanolitsi/pet-clinic.svg?style=svg&circle-token=09759abf9003e4a1f64032e53d12db85afdf76cd)](https://circleci.com/gh/nikimanolitsi/pet-clinic)
+
 # pet-clinic
 
-[![CircleCI](https://circleci.com/gh/nikimanolitsi/pet-clinic.svg?style=svg&circle-token=698e7339653644178898e147468e53e5ee74a7fb)](https://circleci.com/gh/nikimanolitsi/pet-clinic)
 
 Pet Clinic
