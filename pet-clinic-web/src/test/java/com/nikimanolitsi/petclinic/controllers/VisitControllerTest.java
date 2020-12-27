@@ -54,8 +54,8 @@ class VisitControllerTest {
     @BeforeEach
     void setUp() {
         Long ownerId = 1L;
-        Owner owner = Owner.builder().id(ownerId).lastName("Doe").firstName("Joe").build();
         Long petId = 1L;
+        Owner owner = Owner.builder().id(ownerId).lastName("Doe").firstName("Joe").build();
         PetType petType = PetType.builder().id(1L).name("Dog").build();
         Pet pet = Pet.builder().id(1L).birthDate(LocalDate.of(2020, 01, 05)).name("Doggie")
                 .visits(new HashSet<>()).owner(owner).petType(petType).build();

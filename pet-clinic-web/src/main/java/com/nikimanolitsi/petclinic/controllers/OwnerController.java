@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RequestMapping("/owners")
@@ -70,7 +71,7 @@ public class OwnerController {
     }
 
     @PostMapping("/new")
-    public String processCreationOwnerForm(Owner owner, BindingResult result) {
+    public String processCreationOwnerForm(@Valid Owner owner, BindingResult result) {
         if (result.hasErrors()) {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
@@ -86,7 +87,7 @@ public class OwnerController {
     }
 
     @PostMapping("/{ownerId}/edit")
-    public String processUpdateOwnerForm(Owner owner, BindingResult result, @PathVariable Long ownerId) {
+    public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable Long ownerId) {
         if (result.hasErrors()) {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
         } else {
