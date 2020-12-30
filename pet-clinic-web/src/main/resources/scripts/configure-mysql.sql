@@ -1,7 +1,7 @@
 ## Use to run mysql db docker image
-# docker run --name nm-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql
-
+# docker run --name pet-clinic-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql
 # connect to mysql and run as root user
+
 #Create Databases
 CREATE DATABASE dev;
 CREATE DATABASE prod;
